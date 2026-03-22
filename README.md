@@ -9,22 +9,6 @@ The assistant is **strictly grounded** to scraped official bank websites and onl
 
 Out-of-scope questions are refused.
 
-## Repository Link
-
-This workspace is ready to push as a GitHub repository. Create your repo and push this folder:
-
-```bash
-cd voice-bank-agent
-git init
-git add .
-git commit -m "Initial Armenian bank voice agent"
-git branch -M main
-git remote add origin https://github.com/<your-username>/voice-bank-agent.git
-git push -u origin main
-```
-
-Use the resulting URL as your submission link.
-
 ## Bank Sources (Official Websites)
 
 Configured in `services/scraper/config/banks.yaml`:
