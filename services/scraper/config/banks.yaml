@@ -1,0 +1,97 @@
+banks:
+  - id: ameriabank
+    name: Ameriabank
+    base_url: https://ameriabank.am
+    topics:
+      credits:
+        seed_urls:
+          - https://ameriabank.am/personal/loans
+        render_js: true
+        link_selectors:
+          - ".feature-banner__buttons .button_secondary"
+#          - ".cta-main__footer .button_secondary"
+        fact_selectors:
+          - ".cta-main__content"
+          - ".product-card"
+          - ".features3-grid__col"
+      deposits:
+        seed_urls:
+          - https://ameriabank.am/personal/saving
+        render_js: true
+        link_selectors:
+          - ".product-card__footer a"
+        fact_selectors:
+          - ".product-card a, .product-card p"
+          - ".vertical-stack__item-info"
+          - ".mng-text-theme.mng-item-9319"
+          - ".mng-text-theme mng-item-21553"
+          - ".features3-grid__col"
+      branch_locations:
+        seed_urls:
+          - https://ameriabank.am/service-network
+        render_js: true
+        fact_selectors:
+          - "#locations-list div div"
+  - id: acba
+    name: ACBA Bank
+    base_url: https://www.acba.am
+    topics:
+      credits:
+        seed_urls:
+          - https://www.acba.am/hy/individuals/loans
+        render_js: true
+        link_selectors:
+          - ".nextLevelSecondItem a"
+        fact_selectors:
+          - ".product__right__text-forHeight"
+          - ".product__bus_cart"
+          - ".tabs__tpl1__bodys__item .txt__tpl1"
+          - ".wizGuide__text"
+      deposits:
+        seed_urls:
+          - https://www.acba.am/hy/individuals/save-and-invest
+        render_js: true
+        link_selectors:
+          - ".nextLevelSecondItem a"
+        fact_selectors:
+          - ".product__right__text-forHeight"
+          - ".product__bus_cart"
+          - ".tabs__tpl1__bodys__item .txt__tpl1"
+          - ".txt__tpl2 marged_col div"
+      branch_locations:
+        seed_urls:
+          - https://www.acba.am/hy/about-bank/Branches-and-ATMs
+        render_js: true
+        fact_selectors:
+          - 'div[style="font-weight:bold;text-align:center;"]'
+          - ".site_cont .container .fb_branches .fb_branch"
+  - id: evoca
+    name: Evocabank
+    base_url: https://www.evoca.am
+    topics:
+      credits:
+        seed_urls:
+          - https://www.evoca.am/hy/loans
+        link_selectors:
+          - ".main-list__btn-list a"
+          - ".tabitem a:not(.tab__link--active)"
+        fact_selectors:
+          - ".main-list__item-right-content"
+          - ".cards-inner__info-box"
+          - ".cards-info__inner-box"
+      deposits:
+        seed_urls:
+          - https://www.evoca.am/hy/deposits
+        link_selectors:
+          - ".main-list__btn-list a"
+          - ".tab__item a:not(.tab__link--active)"
+        fact_selectors:
+          - ".main-list__item-right-content"
+          - ".cards-inner__info-box"
+          - ".cards-info__inner-box"
+      branch_locations:
+        seed_urls:
+          - https://www.evoca.am/hy/branches-and-atms
+        fact_selectors:
+          - ".map-box__inner .map-box__group:first-of-type .map-box__info"
+

@@ -1,0 +1,7 @@
+beautifulsoup4==4.12.3
+PyYAML==6.0.2
+requests==2.32.3
+trafilatura==1.12.2
+python-slugify==8.0.4
+lxml_html_clean==0.4.2
+playwright==1.53.0

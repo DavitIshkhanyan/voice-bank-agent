@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Armenian Bank Voice Client</title>
+    <style>
+      body { font-family: Arial, sans-serif; max-width: 860px; margin: 24px auto; padding: 0 16px; }
+      h1 { margin-bottom: 8px; }
+      .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+      label { display: block; font-size: 14px; margin-bottom: 4px; }
+      input { width: 100%; padding: 8px; box-sizing: border-box; }
+      button { padding: 10px 14px; margin-right: 8px; margin-top: 12px; }
+      #status { margin-top: 14px; font-weight: bold; }
+      #logs { margin-top: 14px; padding: 12px; background: #111; color: #ddd; border-radius: 8px; height: 220px; overflow-y: auto; white-space: pre-wrap; }
+      .hint { color: #555; font-size: 13px; margin-top: 8px; }
+    </style>
+  </head>
+  <body>
+    <h1>Armenian Bank Voice Client</h1>
+    <p>Join a LiveKit room and talk to the bank voice agent in Armenian.</p>
+
+    <div class="grid">
+      <div>
+        <label for="apiBase">Retrieval API Base URL</label>
+        <input id="apiBase" value="http://localhost:8000" />
+      </div>
+      <div>
+        <label for="roomName">Room name</label>
+        <input id="roomName" value="bank-support-room" />
+      </div>
+      <div>
+        <label for="identity">Identity (optional)</label>
+        <input id="identity" placeholder="leave empty to auto-generate" />
+      </div>
+      <div>
+        <label for="ttl">Token TTL seconds</label>
+        <input id="ttl" type="number" min="60" max="7200" value="3600" />
+      </div>
+    </div>
+
+    <button id="connectBtn">Connect & Speak</button>
+    <button id="disconnectBtn" disabled>Disconnect</button>
+
+    <div id="status">Status: idle</div>
+    <div class="hint">When connected, your microphone is published automatically.</div>
+    <div id="logs"></div>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
+
